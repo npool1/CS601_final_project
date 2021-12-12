@@ -28,7 +28,7 @@
             <section class="form">
                 <div class="field">
                     <p>Name</p>
-                  <label class="label">Name</label>
+                  <!-- <label class="label">Name</label> -->
                   <div class="control">
                     <input name='name' 
                     v-model="form.name" 
@@ -44,7 +44,8 @@
     
               <section class="form">
                 <div class="field">
-                  <label class="label">Email</label>
+                    <p>Email</p>
+                  <!-- <label class="label">Email</label> -->
                   <div class="control">
                     <input name="email" 
                     v-model="form.email"
@@ -61,7 +62,8 @@
           </section>
           <section class="form">
             <div class="field">
-                <label class="label">Message</label>
+                <p>Message</p>
+                <!-- <label class="label">Message</label> -->
                 <div class="control">
                   <textarea v-model="form.message" class="textarea" placeholder="Send us a note!"></textarea>
                 </div>
@@ -75,23 +77,10 @@
               </label>
             </div>
           </div>
-
-          <div class="column">
-            <section class="section" id="results">
-              <div class="box">
-                <ul>          
-                  <!-- loop through all the `form` properties and show their values -->
-                  <li v-for="(item, k) in form">
-                    <strong>{{ k }}:</strong> {{ item }}
-                  </li>
-                </ul>
-              </div>
+              <button class='button' onclick="">Submit</button>
             </section>
           </div>
         </div>
-
-</section>
-      </section>
     </div>
   </div>
   
