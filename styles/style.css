@@ -127,3 +127,24 @@ p {
     padding-right: 2rem;
     padding-left: 2rem;
 }
+.control {
+    display: block;
+    text-align: center;
+    width: auto;
+    font-family: quicksandregular;
+
+}
+input,textarea{
+    width:100%;
+    display:block
+}
+textarea{
+    font-family: quicksandregular;
+}
+input{
+    font-family: quicksandregular;
+}
+.field p{
+    text-align: center;
+    display: block;
+}
