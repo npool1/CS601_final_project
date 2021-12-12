@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact the Crowded Kitchen</title>
+</head>
+
+<body>
+  <div class="columns" id="app">
+    <div class="column is-two-thirds">
+      <section class="section">
+        <h1 class="title">Send us a note!</h1>
+        <p class="subtitle">
+          Let us know what you think of the site or better yet, share a recipe!
+        </p>
+        <hr>      
+        
+        <!-- form starts here -->
+        <section class="form">
+            <section class="form">
+                <div class="field">
+                  <label class="label">Name</label>
+                  <div class="control">
+                    <input name='name' 
+                    v-model="form.name" 
+                    v-validate="'required|min:3'" 
+                    v-bind:class="{'is-danger': errors.has('name')}" 
+                    class="input" type="text" placeholder="Your name">
+                  </div>
+                    <p class="help is-danger" v-show="errors.has('name')">
+                        {{errors.first('name')}}
+                    </p>
+                </div>
+              </section>
+    
+              <section class="form">
+                <div class="field">
+                  <label class="label">Email</label>
+                  <div class="control">
+                    <input name="email" 
+                    v-model="form.email"
+                    v-validate="'required|email'"
+                    v-bind:class="{'is-danger': errors.has('email')}"
+                    data-vv-as="email" 
+                    class="input" type="text" placeholder="Your email">
+                  </div>
+                  <p class="help is-danger" v-show="errors.has('email')">
+                        {{errors.first('email')}}
+                    </p>
+                </div>
+              </section>
+          </section>
+          <section class="form">
+            <div class="field">
+                <label class="label">Message</label>
+                <div class="control">
+                  <textarea v-model="form.message" class="textarea" placeholder="Send us a note!"></textarea>
+                </div>
+              </div>
+          </section>
+          <div class="field">
+            <div class="control">
+              <label class="checkbox">
+                <input type="checkbox" v-model="form.terms">
+                Please sign me up a weekly news letter from the Crowded Kitchen
+              </label>
+            </div>
+          </div>
+
+          <div class="column">
+            <section class="section" id="results">
+              <div class="box">
+                <ul>          
+                  <!-- loop through all the `form` properties and show their values -->
+                  <li v-for="(item, k) in form">
+                    <strong>{{ k }}:</strong> {{ item }}
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </div>
+
+</section>
+      </section>
+    </div>
+  </div>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js"></script>
+<script src="https://unpkg.com/vee-validate@2.0.0-rc.18/dist/vee-validate.js"></script>
+
+<script>
+Vue.use(VeeValidate);
+  new Vue({
+    el: '#app',
+    data: {
+        form : {
+            name: '',
+            email: '',
+            message: '',
+            terms: false,
+        }
+    }
+  })
+</script>
+
+</body>
+</html>

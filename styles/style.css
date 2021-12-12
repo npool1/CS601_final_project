@@ -1,0 +1,129 @@
+@font-face {
+    font-family: 'black_jackregular';
+    src: url('fonts/blackjack-webfont.woff2') format('woff2'),
+         url('fonts/blackjack-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'quicksandregular';
+    src: url('fonts/quicksand-regular-webfont.woff2') format('woff2'),
+         url('fonts/quicksand-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* mobile phone */
+@media screen and (max-width: 480px) {
+
+    video {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 200px;
+        width: 300px;
+    }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 200px;
+        width: 300px;
+    }
+}
+/* tablet */
+@media screen and (max-width: 768px) {
+
+    video {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 200px;
+        width: 300px;
+    }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 200px;
+        width: 300px;
+    }
+
+    p { 
+        font-size: 2rem;
+    }
+}
+/* desktop */
+
+body {
+    background-color: #f0efeb;
+    color:#6b705c;
+    font-family: quicksandregular;
+}
+h1 {
+    color: #a5a58d;
+    font-family: black_jackregular;
+}
+nav {
+    background-color: #eddcd2;
+    margin: 0;
+    padding: 0rem;
+    height: 3rem;
+    border-radius: 2rem;
+    font-size: 1rem
+}
+ul.nav-bar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+li.nav-bar {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+a {
+    color: #d4a373;
+    text-decoration: none;
+}
+li a:hover:not(.active) {
+    color: #ffe8d6;
+}
+
+video {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    margin: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1rem;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td{
+    padding: 1rem;
+}
+
+h4 {
+    font-style: italic;
+    font-weight: bolder;
+}
+
+p {
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
