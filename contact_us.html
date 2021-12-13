@@ -70,16 +70,20 @@
               </label>
             </div>
           </div>
-              <button class='button' onclick="">Submit</button>
+              <button class='button' onclick=formSubmit()>Submit</button>
             </section>
           </div>
         </div>
     </div>
   </div>
+  <div id="thanks" style="display:none;">
+      <h2>Thank you for reaching out!</h2>
+  </div>
   
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js"></script>
 <script src="https://unpkg.com/vee-validate@2.0.0-rc.18/dist/vee-validate.js"></script>
 <script src="js/nav_bar.js"></script>
+<script src="js/button.js"></script>
 
 <script>
 Vue.use(VeeValidate);

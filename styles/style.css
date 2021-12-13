@@ -208,4 +208,7 @@ content: '';
 .section button {
     margin-top: 2rem;
 }
+#thanks {
+    text-align: center;
+}
 
