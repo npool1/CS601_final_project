@@ -23,10 +23,13 @@ for (i =0; i <= links.length -1; i++){
   a.appendChild(document.createTextNode(link_text[i]));
   const li = document.createElement("li");
   li.className = "nav-bar";
-
   li.appendChild(a);
+  li.id = link_text[i];
   ul.appendChild(li);
 }
 nav.appendChild(ul);
 header.append(nav)
+
 }
+
+
