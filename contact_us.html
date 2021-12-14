@@ -71,12 +71,16 @@
               </label>
             </div>
           </div>
-              <button class='button' v-bind:disabled="errors.any()" onclick=formSubmit()>Submit</button>
+              <!-- <button class='button' v-bind:disabled="errors.any()" onclick=formSubmit()>Submit</button> -->
+              <button class='button' v-bind:disabled="errors.any()" @click="signInButtonPressed">Submit</button>
             </section>
           </div>
     </div>
   <div id="thanks" style="display:none;">
       <h2>Thank you for reaching out!</h2>
+  </div>
+  <div id="oops" style="display:none;">
+      <h2>Please fill out the required fields.</h2>
   </div>
   
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js"></script>
@@ -95,6 +99,19 @@ Vue.use(VeeValidate);
             message: '',
             terms: false,
         }
+    },
+    methods: {
+      signInButtonPressed(){
+        this.$validator.validateAll().then((result) => {
+        if (result) {
+          document.getElementById("app").style.display="none";
+          document.getElementById("oops").style.display="none"; 
+	        document.getElementById("thanks").style.display="block";
+          return;
+        }
+        document.getElementById("oops").style.display="block";
+      });
+      }
     }
   })
 </script>
