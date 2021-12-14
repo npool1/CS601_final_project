@@ -18,7 +18,7 @@
         <hr>      
         
         <!-- form starts here -->
-        <section class="form">
+        <section class="form" v-on:submit.prevent>
             <section class="form">
                 <div class="field">
                     <p>Name</p>
@@ -71,7 +71,7 @@
               </label>
             </div>
           </div>
-              <button class='button' onclick=formSubmit()>Submit</button>
+              <button class='button' v-bind:disabled="errors.any()" onclick=formSubmit()>Submit</button>
             </section>
           </div>
     </div>
